@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Ubuntu+Mono&display=swap');
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Ubuntu Mono', monospace; */
+
+body{
+    margin: 0;
+    text-align: center;
+}
+
+nav{
+    align-items: center;
+    background-color: #292424d6;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    padding: 0px 30px;
+    justify-content: space-between;
+    position: fixed;
+    width: -webkit-fill-available;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 10;
+}
+
+main{
+    font-family: 'Ubuntu Mono', monospace;
+    margin-bottom: 100px;
+}
+
+#logo{
+    font-family: "Monoton", cursive;
+    font-size: 40px;
+}
+
+#navigation{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+}
+
+#search{
+    margin: 0 60px 0 0;
+}
+
+#navigation a{
+    margin: 0 30px;
+    text-decoration: none;
+    color: white;
+}
+
+img#cover{
+    width: 100%;
+    margin-top: -15%;
+}
+
+h1.main-text{
+    display: inline-block;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 50px auto;
+    animation: 
+      blink-caret .5s step-end infinite; 
+}
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .gallery-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 50px;
+  }
+  
+  .item {
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    transition: flex 0.8s ease;
+  }
+  
+  .item:hover {
+    flex: 7;
+  }
+  
+  .item-1 {
+    background-image: url("images/1 (1).jpg");
+  }
+  
+  .item-2 {
+    background-image: url("images/1 (2).jpg");
+  }
+  
+  .item-3 {
+    background-image: url("images/1 (8).jpg");
+  }
+  
+  .item-4 {
+    background-image: url("images/1 (4).jpg");
+  }
+
+.about-content{
+    position: relative;
+    left: 0;
+    animation: position 8.5s linear 2s infinite alternate;
+    overflow: hidden;
+    display: inline-block;
+    z-index: 1;
+}
+
+@keyframes position{
+   0%{ opacity: 0; left: -20%; }
+   50% { opacity: 1; left: 0; }
+   100% { opacity: 0; left: 20%; }
+}
+
+.chefs{
+  margin: 120px 10% 0;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  column-gap: 30px;
+}
+
+.card{
+  border-radius: 8px;
+  border: 2px solid orange;
+  padding: 30px 20px;
+  height: 400px;
+  transition: transform 1s ease;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  background-color: white;
+}
+
+.card:hover{
+  transform: scale3d(1.2, 1.2, 1);
+}
+
+.chefs .card img{
+  height: 150px;
+  width: 150px;
+  box-shadow: 0px 5px 5px orange;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.chefs .card p{
+  font-weight: 600;
+  color: gray;
+}
+
+#chef1{
+  object-position: bottom;
+}
+
+.second-gallery{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 120px 10% 0;
+}
+
+.second-gallery img{
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.holder{
+  overflow: hidden;
+  height: 600px;
+}
+
+.overlay {
+  position: relative;
+  top: -1200px;
+  width: 100%;
+  height: 600px;
+  background-color: #0000008f;
+  color: white;
+  box-sizing: border-box;
+  transition: top 0.5s ease;
+}
+
+.holder:hover .overlay{
+  top:-600px;
+}
+
+figcaption{
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 10px;
+  border-left: 5px solid white;
+  transform: translate(0px, 200px);
+}
+
+figcaption h2{
+  margin: 0;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 30px;
+}
+
+figcaption p{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+/* footer */
+
+footer{
+  font-family: 'Montserrat', sans-serif;
+  background-color: #292424;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+footer .links{
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+}
+
+.links a{
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer .contact button{
+  font-size: 40px;
+  background-color: transparent;
+}
+
+footer div{
+  margin-bottom: 40px;
+}
+
+button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: white;
+  opacity: 0.75;
+}
+
+button:hover{
+  opacity: 1;
+}
+
+footer span{
+  margin: 0 5px;
+  font-size: 24px;
+  font-family: 'Monoton';
+}
